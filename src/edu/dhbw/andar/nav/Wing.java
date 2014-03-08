@@ -9,7 +9,7 @@ public class Wing extends MiCharacter implements FuncionesNaves{
 	
 	
 	public Wing() {
-		super(Global.getModel("monstruo1.obj"), "Wing.patt");
+		super(Global.getModel("Wing.obj"), "Wing.patt");
 		
 	}
 
