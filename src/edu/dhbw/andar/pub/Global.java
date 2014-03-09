@@ -97,6 +97,8 @@ public class Global {
 		char turnPlay; //turno
 		//(8699000100A);
 		// 0123456789abcdefghij
+
+		turnPlay = parametro.charAt(10); //obtener el turno del jugador
 		
 		int x = 0; //variable de control para el array
 				
@@ -119,6 +121,5 @@ public class Global {
 			//System.out.println("" +  atk [x]);
 			x++;	
 		}
-		turnPlay = parametro.charAt(10); //obtener el turno del jugador
 	}
 }
