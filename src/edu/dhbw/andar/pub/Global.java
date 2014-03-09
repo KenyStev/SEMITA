@@ -24,8 +24,8 @@ public class Global {
 	public static MiCharacter monstruo2;
 	public static Wing wing;
 	
-	//static String SERVER_IP = "172.16.171.83";
-	static String SERVER_IP = "172.16.170.1";
+	static String SERVER_IP = "172.16.171.83";
+	//static String SERVER_IP = "172.16.170.1";
 	
 	static boolean server_lock = false;
 	

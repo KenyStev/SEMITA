@@ -51,8 +51,8 @@ public class CustomActivity extends AndARActivity {
 
 			Global.monstruo1 = new MiCharacter(Global.getModel("monstruo1.obj"),"c2.patt");
 			Global.monstruo2 = new MiCharacter(Global.getModel("monstruo2.obj"),"e2.patt");
-			Global.wing = new Wing();
 			
+			Global.wing = new Wing();
 		}catch (Exception ex){
 			//handle the exception, that means: show the user what happened
 			System.out.println("");
@@ -71,7 +71,7 @@ public class CustomActivity extends AndARActivity {
 	            // TODO Auto-generated method stub
 	            while (true) {
 	                try {
-	                    Thread.sleep(10000);
+	                    Thread.sleep(500);
 	                    mHandler.post(new Runnable() {
 
 	                        @Override
@@ -84,12 +84,13 @@ public class CustomActivity extends AndARActivity {
 	                            Toast.makeText(CustomActivity.this, str, Toast.LENGTH_LONG ).show();
 	                            if(str.equals("1"))
 	                            {
-	                            	Global.monstruo1.model.scale=8;
-	                            	Global.monstruo2.model.scale=4;
+	                            	Global.wing.model.scale=4;
+//	                            	Global.monstruo2.selected.model.scale=0;
 	                            }else
 	                            {
-	                            	Global.monstruo1.model.scale=4;
-	                            	Global.monstruo2.model.scale=8;
+	                            	Global.wing.model.scale=8;
+//	                            	Global.monstruo1.selected.model.scale=0;
+//	                            	Global.monstruo2.selected.model.scale=0;
 	                            }
 	                        }
 	                    });
