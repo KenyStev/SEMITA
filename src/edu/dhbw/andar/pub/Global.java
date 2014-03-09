@@ -24,8 +24,8 @@ public class Global {
 	public static MiCharacter monstruo2;
 	public static Wing wing;
 	
-	//static String SERVER_IP = "172.16.171.83";
-	static String SERVER_IP = "172.16.170.1";
+	static String SERVER_IP = "172.16.171.83";
+	//static String SERVER_IP = "172.16.170.1";
 	
 	static boolean server_lock = false;
 	
@@ -92,30 +92,24 @@ public class Global {
 
 	public static void stringToArray(String parametro)
 	{
-		int [] hp = new int [2];
-		boolean [] atk = new boolean [6];
-		char turnPlay;
+		int [] hp = new int [2]; //health
+		boolean [] atk = new boolean [6];//ataques
+		char turnPlay; //turno
 		//(8699000100A);
 		// 0123456789abcdefghij
 		
-		int x = 0; 
+		int x = 0; //variable de control para el array
 				
-		for (int i = 0; i < 3 ; i++)
+		for (int i = 0; i < 3 ; i++) //ciclo para obtener valores de health
 		{
 			String valor = parametro.substring(i, i+2);	
 			hp [x] = Integer.parseInt(valor);
 			x++;			
 		}
 		
-		x = 0;		
-		for (int i = 4; i < 10; i++)
-		{
-			String valor = parametro.substring(i, i+1);	
-			atk[x] = Boolean.parseBoolean(valor);
-			x++;	
-		}
-		
-		for (int i = 4; i < 10; i++)
+		x = 0; //reiniciar x
+				
+		for (int i = 4; i < 10; i++) //ciclo para obtener el ataque utilizado
 		{
 			String valor = parametro.substring(i, i+1);	
 			if (Integer.parseInt(valor) != 0)
@@ -125,6 +119,6 @@ public class Global {
 			//System.out.println("" +  atk [x]);
 			x++;	
 		}
-		turnPlay = parametro.charAt(10);
+		turnPlay = parametro.charAt(10); //obtener el turno del jugador
 	}
 }
