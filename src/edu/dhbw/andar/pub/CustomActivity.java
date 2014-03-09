@@ -137,9 +137,9 @@ public class CustomActivity extends AndARActivity {
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
 	 */
-	@Override
+	/*@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		/*if(item.getItemId()==1) {
+		if(item.getItemId()==1) {
 			artoolkit.unregisterARObject(someObject);
 		} else if(item.getItemId()==0) {
 			try {
@@ -149,14 +149,14 @@ public class CustomActivity extends AndARActivity {
 			} catch (AndARException e) {
 				e.printStackTrace();
 			}
-		}*/
+		}
 		switch(item.getItemId()) {
 		case MENU_SCREENSHOT:
 			new TakeAsyncScreenshot().execute();
 			break;
 		}
 		return true;
-	}
+	}*/
 	
 	class TakeAsyncScreenshot extends AsyncTask<Void, Void, Void> {
 		
@@ -193,7 +193,7 @@ public class CustomActivity extends AndARActivity {
 	public boolean onTouchEvent(MotionEvent event)
 	{
 		super.onTouchEvent(event);
-//		if(monstruo1.isVisible() && !monstruo2.isVisible() && monstruo1.model.scale==4)
+//		if(Global.wing.isVisible() && )
 //		{
 //			monstruo1.model.scale=8;
 //			monstruo2.model.scale=4;
