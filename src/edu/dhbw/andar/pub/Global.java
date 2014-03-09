@@ -89,4 +89,42 @@ public class Global {
 		server_lock = false;
 		return msg;
 	}
+
+	public static void stringToArray(String parametro)
+	{
+		int [] hp = new int [2];
+		boolean [] atk = new boolean [6];
+		char turnPlay;
+		//(8699000100A);
+		// 0123456789abcdefghij
+		
+		int x = 0; 
+				
+		for (int i = 0; i < 3 ; i++)
+		{
+			String valor = parametro.substring(i, i+2);	
+			hp [x] = Integer.parseInt(valor);
+			x++;			
+		}
+		
+		x = 0;		
+		for (int i = 4; i < 10; i++)
+		{
+			String valor = parametro.substring(i, i+1);	
+			atk[x] = Boolean.parseBoolean(valor);
+			x++;	
+		}
+		
+		for (int i = 4; i < 10; i++)
+		{
+			String valor = parametro.substring(i, i+1);	
+			if (Integer.parseInt(valor) != 0)
+				atk[x] = true;
+			else
+				atk[x] = false;
+			//System.out.println("" +  atk [x]);
+			x++;	
+		}
+		turnPlay = parametro.charAt(10);
+	}
 }
